@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <groups>
+  <define name="home">
+  <include name="reg"></include>
+  <include name="unit"></include>
+  </define>
+    <define name="home1">
+  <include name="sanity"></include>
+  <include name="unit"></include>
+  </define>
+    <define name="home2">
+  <include name="reg"></include>
+  </define>
+  <run>
+  
+    <include name="home2"></include>
+      
+      </run>
+  </groups>
+    <classes>
+      <class name="org.selenium.TestNgClass"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
